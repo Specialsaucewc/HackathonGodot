@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/create_dlscript.png-44de56592b83c1a4bc09d7e84505dc25.stex"
+path="res://.import/create_dlscript.png-6409cdfc2b153cbb2c76cfca908bae3d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://godot_bindings/godot_headers/images/faq/create_dlscript.png"
-dest_files=[ "res://.import/create_dlscript.png-44de56592b83c1a4bc09d7e84505dc25.stex" ]
+source_file="res://source/godot_bindings/godot_headers/images/faq/create_dlscript.png"
+dest_files=[ "res://.import/create_dlscript.png-6409cdfc2b153cbb2c76cfca908bae3d.stex" ]
 
 [params]
 
