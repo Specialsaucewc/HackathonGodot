@@ -1,7 +1,6 @@
 .import/
 .vs/
 godot_bindings/lib/
-libs/
 
 
 export.cfg
