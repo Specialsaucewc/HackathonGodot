@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/GDExample.obj-8cda98d09e198add7b6aab9bb03d4949.mesh"
+
+[deps]
+
+files=[ "res://.import/GDExample.obj-8cda98d09e198add7b6aab9bb03d4949.mesh" ]
+
+source_file="res://source/example/x64/Debug/GDExample.obj"
+dest_files=[ "res://.import/GDExample.obj-8cda98d09e198add7b6aab9bb03d4949.mesh", "res://.import/GDExample.obj-8cda98d09e198add7b6aab9bb03d4949.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
