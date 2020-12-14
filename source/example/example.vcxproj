@@ -78,13 +78,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\godot_headers;C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\include\core;C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\include\gen;C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)godot_bindings\godot_headers;$(SolutionDir)godot_bindings\include\core;$(SolutionDir)godot_bindings\include\gen;$(SolutionDir)godot_bindings\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)godot_bindings\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\godot_headers;C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\include\core;C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\include\gen;C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)godot_bindings\godot_headers;$(SolutionDir)godot_bindings\include\core;$(SolutionDir)godot_bindings\include\gen;$(SolutionDir)godot_bindings\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)godot_bindings\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -124,7 +124,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)godot_bindings\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libgodot-cpp.windows.debug.64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -142,7 +142,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\speci\Desktop\Godot Projects\Hackathon2020\godot_bindings\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)godot_bindings\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libgodot-cpp.windows.debug.64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
