@@ -1,7 +1,7 @@
 .import/
 .vs/
 **/godot_bindings/lib/
-**/Debug/
+Debug/
 
 
 export.cfg
