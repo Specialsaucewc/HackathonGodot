@@ -149,9 +149,11 @@
   <ItemGroup>
     <ClCompile Include="GDExample.cpp" />
     <ClCompile Include="GDLibrary.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GDExample.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
