@@ -25,9 +25,9 @@ void GDExample::_process(float delta) {
     time_passed += delta;
     
     Vector2 new_position = Vector2(10.0 + (100.0 * sin(time_passed * 2.0)), 10.0 + (100.0 * cos(time_passed * 1.5)));
-
-    color.r = 10.0 + (100.0 * sin(time_passed * 2.0));
-    color.b = 10.0 + (100.0 * cos(time_passed * 1.5));
+    color.r = .5 + .5 * sin(time_passed);
+    color.b = .5 + .5 * sin(time_passed + 2);
+    color.g = .5 + .5 * sin(time_passed + 4);
 
     set_modulate(color);
     set_position(new_position);
