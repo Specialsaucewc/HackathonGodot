@@ -11,6 +11,7 @@ namespace godot {
 
     private:
         float time_passed;
+        Color color;
 
     public:
         static void _register_methods();
