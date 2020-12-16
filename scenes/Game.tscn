@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="GameBoard" type="Node2D"]
+position = Vector2( 512, 300 )
