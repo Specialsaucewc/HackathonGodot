@@ -1,5 +1,4 @@
 #include "GameLoop.h"
-#include <ResourceLoader.hpp>
 
 using namespace godot;
 MetaState* GameLoop::metaState = NULL;
@@ -9,6 +8,8 @@ void GameLoop::_register_methods() {
     register_method("_ready", &GameLoop::_ready);
     register_method("_init", &GameLoop::_init);
     register_method("_process", &GameLoop::_process);
+
+    register_property("hex_spawn_time", &GameLoop::hexSpawnTime, 5.0f);
 }
 
 GameLoop::GameLoop()
@@ -55,5 +56,23 @@ void GameLoop::_process(float delta)
             Godot::print("Game Sate: " + currentMetaState);
             stateChanged = false;
         }
+    }
+
+    switch (*GetMetaState())
+    {
+    case MetaState::Gameplay:
+        // Gameplay stuff here
+        secondsSinceLastSpawn += delta;
+        if (secondsSinceLastSpawn > hexSpawnTime)
+        {
+            secondsSinceLastSpawn = fmod(secondsSinceLastSpawn, hexSpawnTime);
+            sceneManager->LoadScene("Hex.tscn", this);
+
+            if (debugMode)
+            {
+                Godot::print("Hex Added");
+            }
+        }
+        break;
     }
 }

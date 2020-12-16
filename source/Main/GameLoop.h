@@ -3,6 +3,8 @@
 #include <Node.hpp>
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
+#include <ResourceLoader.hpp>
+
 #include "SceneManager.h"
 
 namespace godot {
@@ -26,6 +28,10 @@ namespace godot {
 			Ref<PackedScene> mainGame;
 			Node* mainGameNode = nullptr;
 			SceneManager* sceneManager;
+
+			// Hex spawn
+			float secondsSinceLastSpawn = 0.0f;
+			float hexSpawnTime = 5.0f;
 
 			// Debug
 			bool debugMode = true;
