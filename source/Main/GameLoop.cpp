@@ -11,6 +11,7 @@ void GameLoop::_register_methods() {
 
 GameLoop::GameLoop()
 {
+    sceneManager = sceneManager->GetInstance();
 }
 
 GameLoop::~GameLoop()
@@ -19,7 +20,7 @@ GameLoop::~GameLoop()
 
 void GameLoop::_ready()
 {
-    sceneManager.LoadScene("MainMenu.tscn", this);
+    sceneManager->LoadScene("MainMenu.tscn", this);
 }
 
 void GameLoop::_init()

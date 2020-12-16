@@ -13,7 +13,7 @@ namespace godot {
 		private:
 			Ref<PackedScene> mainGame;
 			Node* mainGameNode = nullptr;
-			SceneManager sceneManager;
+			SceneManager* sceneManager;
 
         public:
 		static void _register_methods();

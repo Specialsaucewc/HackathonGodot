@@ -35,6 +35,6 @@ void MainMenu::_process(float delta)
 
 void MainMenu::_on_LoadGame_pressed(Variant)
 {
-    SceneManager sceneManager;
-    sceneManager.LoadScene("Example.tscn", this);
+    SceneManager* sceneManager = sceneManager->GetInstance();
+    sceneManager->LoadScene("Example.tscn", this);
 }

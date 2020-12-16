@@ -6,22 +6,31 @@
 
 namespace godot {
 
-    class SceneManager : public Node
+    class SceneManager
     {
-        GODOT_CLASS(SceneManager, Node)
 
     private:
+        static SceneManager* instance;
+        SceneManager() {};
+        ~SceneManager() {};
+
         Node* rootSceneNode = nullptr;
         Ref<PackedScene> _currentScene;
+        Node* _currentSceneNode;
 
-    public:
-        static void _register_methods();
+        Node* GetRootSceneNode(Node* callingNode);
 
-        SceneManager();
-        ~SceneManager();
+    public:       
+        static SceneManager* GetInstance() {
+            if (!instance)
+                instance = new SceneManager;
+            return instance;
+        }
 
         void _init();
         void _process();
-        void LoadScene(const godot::String sceneToLoad, Node* rootNode);
+        void LoadScene(const godot::String sceneToLoad, Node* callingNode);
+        void UnloadScene(const godot::String sceneToUnload, Node* rootNode);
+        void SwapScene(const godot::String sceneToUnload, const godot::String sceneToLoad, Node* callingNode);
     };
 }
