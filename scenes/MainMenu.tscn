@@ -2,29 +2,26 @@
 
 [ext_resource path="res://scenes/MainMenu.gdns" type="Script" id=1]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="MainMenu" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LoadGame" type="Button" parent="."]
-margin_left = 401.795
-margin_top = 136.308
-margin_right = 618.795
-margin_bottom = 190.308
+margin_left = 385.303
+margin_top = 168.867
+margin_right = 597.303
+margin_bottom = 224.867
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="LoadGame"]
-margin_right = 219.0
-margin_bottom = 52.0
-text = "Load Game"
-align = 1
-valign = 1
+margin_right = 40.0
+margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

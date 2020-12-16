@@ -33,7 +33,9 @@ void UI::_process(float delta)
 
 void UI::_on_LoadGame_pressed(Variant)
 {
-    //set_modulate(Color(255.0f, 0.0f, 0.0f));
     SceneTree* tree = get_tree();
-    tree->change_scene_to(mainGame);
+    //tree->change_scene_to(mainGame);
+    Node* testNode = get_node("Test");
+    Node* sceneToLoad = mainGame->instance();
+    testNode->add_child(sceneToLoad);
 }
