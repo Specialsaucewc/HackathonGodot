@@ -17,21 +17,22 @@ Player::~Player() {
 void Player::_init() {
     // initialize any variables here
     rotation = get_rotation();
+    input = Input::get_singleton();
 }
 
 void Player::_physics_process(float delta) {
     float axis = get_input();
 
-    float new_rotation = rotation + 1;
+    float new_rotation = (axis*.1);
     apply_rotation(new_rotation);
 }
 
 float Player::get_input() {
     float axis = 0;
-    if (Input.IsActionPressed("player_left")) {
+    if (input->is_action_pressed("player_left")) {
         return axis -= 1;
     }
-    if (Input.IsActionPressed("player_right")) {
+    if (input->is_action_pressed("player_right")) {
         return axis += 1;
     }
     return axis;

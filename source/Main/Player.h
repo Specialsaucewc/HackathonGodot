@@ -1,6 +1,7 @@
 #pragma once
 #include <Godot.hpp>
 #include <KinematicBody2D.hpp>
+#include <Input.hpp>
 
 namespace godot {
 
@@ -9,6 +10,7 @@ namespace godot {
 
     private:
         float rotation;
+        Input* input;
         void apply_rotation(float rot);
         float get_input();
 
