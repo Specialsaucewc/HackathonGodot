@@ -2,7 +2,9 @@
 .vs/
 **/godot_bindings/lib/
 Debug/
-
+build.bat
+build.sh
+project.4coder
 
 export.cfg
 export_presets.cfg

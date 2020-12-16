@@ -3,6 +3,6 @@
 [ext_resource path="res://libs/main.gdnlib" type="GDNativeLibrary" id=1]
 
 [resource]
-resource_name = "MainMenu"
-class_name = "MainMenu"
+resource_name = "SceneManager"
+class_name = "SceneManager"
 library = ExtResource( 1 )
