@@ -16,6 +16,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 
     godot::register_class<godot::GameLoop>();
     godot::register_class<godot::MainMenu>();
-    godot::register_class<godot::SceneManager>();
     godot::register_class<godot::Player>();
 }
