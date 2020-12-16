@@ -67,7 +67,7 @@ void fragment() {
 		pow(
 			sin(100.*N21(hc.zw) + t*FlickerSpeed),
 		4);
-	float c = smoothstep(.0, .1, fade);
+	float c = smoothstep(.01, .05, fade);
 
 	col = 0.5 + 0.5*cos(ColorSpeed*t+hc.zwz+vec3(0,2,4));
 	col *= c;
