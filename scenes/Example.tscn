@@ -6,6 +6,7 @@
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
+uniform bool Animate = true;
 uniform float PI = 3.14159265;
 
 float HexDist(vec2 p) {
@@ -26,11 +27,12 @@ vec2 Rot(vec2 p, float a) {
 void fragment() {
 	vec2 uv = UV - .5;
 	vec3 col = vec3(0);
-	float t = TIME;
+	float t = float(Animate) * TIME;
 	
 //									modulate direction
-	float angle = mix(0, 2.*PI, t*.1 * sign(sin(t)));
+	float angle = mix(0, 2.*PI, t*.1);
 	uv = abs(Rot(uv, angle));
+	col = vec3(uv, 0);
 	
 	float d = sin(3.*HexDist(uv) + t);
 	float near = smoothstep(.2, .22, d);
@@ -44,6 +46,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
+shader_param/Animate = false
 shader_param/PI = 3.14159
 
 [node name="Node2D" type="Node2D"]

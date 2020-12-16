@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Hex" type="Node2D"]
+position = Vector2( 512, 300 )
+scale = Vector2( 6, 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+rotation = 0.523599
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+polygon = PoolVector2Array( -129.9, -75, -86.6, -50, -86.6, 50, 0, 100, 86.6, 50, 86.6, -50, 0, -100, 0, -150, 129.9, -75, 129.9, 75, 0, 150, -129.9, 75 )
+
+[node name="Polygon2D" type="Polygon2D" parent="KinematicBody2D"]
+polygon = PoolVector2Array( 0, -150, 129.9, -75, 129.9, 75, 0, 150, -129.9, 75, -129.9, -75, -86.6, -50, -86.6, 50, 0, 100, 86.6, 50, 86.6, -50, 0, -100 )
