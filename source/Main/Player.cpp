@@ -5,6 +5,7 @@ using namespace godot;
 void Player::_register_methods() {
     register_method("_physics_process", &Player::_physics_process);
     register_method("_init", &Player::_init);
+    register_property("move_speed", &Player::moveSpeed, 10.f);
 }
 
 Player::Player() {
@@ -23,7 +24,7 @@ void Player::_init() {
 void Player::_physics_process(float delta) {
     float axis = get_input();
 
-    float new_rotation = (axis*.1);
+    float new_rotation = (axis*delta*moveSpeed);
     apply_rotation(new_rotation);
 }
 

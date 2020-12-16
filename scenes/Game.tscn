@@ -6,3 +6,8 @@
 position = Vector2( 512, 300 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+move_speed = 20.0
+
+[node name="Center" type="Polygon2D" parent="."]
+scale = Vector2( 0.8, 0.8 )
+polygon = PoolVector2Array( -25, -43.3, 25, -43.3, 50, 0, 25, 43.3, -25, 43.3, -50, 0, -40, 0, -20, 34.64, 20, 34.64, 40, 0, 20, -34.64, -20, -34.64, -40, 0, -50, 0 )

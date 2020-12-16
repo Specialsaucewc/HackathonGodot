@@ -10,6 +10,7 @@ namespace godot {
 
     private:
         float rotation;
+        float moveSpeed;
         Input* input;
         void apply_rotation(float rot);
         float get_input();

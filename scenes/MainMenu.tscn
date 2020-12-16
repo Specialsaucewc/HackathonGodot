@@ -28,10 +28,10 @@ anchor_left = 0.0210236
 anchor_top = -0.021022
 anchor_right = 0.0210236
 anchor_bottom = -0.021022
-margin_left = 405.485
-margin_top = 461.499
-margin_right = 617.484
-margin_bottom = 517.499
+margin_left = 405.159
+margin_top = 460.841
+margin_right = 617.159
+margin_bottom = 510.841
 custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
