@@ -4,6 +4,10 @@
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
 #include <Variant.hpp>
+#include <ResourceLoader.hpp>
+
+#include "SceneManager.h"
+#include "GameLoop.h"
 
 namespace godot {
     

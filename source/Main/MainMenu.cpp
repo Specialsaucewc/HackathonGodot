@@ -1,8 +1,5 @@
 #include "MainMenu.h"
-#include <ResourceLoader.hpp>
-#include <PackedScene.hpp>
 
-#include "SceneManager.h"
 
 using namespace godot;
 
@@ -38,4 +35,5 @@ void MainMenu::_on_LoadGame_pressed(Variant)
     SceneManager* sceneManager = sceneManager->GetInstance();
     //sceneManager->LoadScene("Example.tscn", this);
     sceneManager->SwapScene("MainMenu.tscn", "Game.tscn", this);
+    GameLoop::SetMetaState(MetaState::Gameplay);
 }
