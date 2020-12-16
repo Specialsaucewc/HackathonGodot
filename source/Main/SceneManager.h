@@ -13,6 +13,9 @@ namespace godot {
 
     private:
         static SceneManager* instance;
+        //static Node* sceneRootNode;
+        //static bool sceneRootNodeSet;
+
         SceneManager() {
             loader = ResourceLoader::get_singleton();
         };
@@ -33,10 +36,27 @@ namespace godot {
             return instance;
         }
 
-        void _init();
+        /*static Node* GetRootNode()
+        {
+            if (sceneRootNode)
+            {
+                return sceneRootNode;
+            }
+        }*/
+
+        /*static void SetRootNode(Node* callingNode)
+        {
+            if (!sceneRootNodeSet)
+            {
+                sceneRootNode = callingNode->get_tree()->get_current_scene()->get_node("SceneRootNode");
+                sceneRootNodeSet = true;
+            }
+        }*/
+
+        void _init(Node* callingNode);
         void _process();
         void LoadScene(const godot::String sceneToLoad, Node* callingNode);
-        void UnloadScene(const godot::String sceneToUnload, Node* rootNode);
+        void UnloadScene(const godot::String sceneToUnload, Node* callingNode);
         void SwapScene(const godot::String sceneToUnload, const godot::String sceneToLoad, Node* callingNode);
     };
 }

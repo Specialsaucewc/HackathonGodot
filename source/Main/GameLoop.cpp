@@ -12,6 +12,7 @@ void GameLoop::_register_methods() {
 GameLoop::GameLoop()
 {
     sceneManager = sceneManager->GetInstance();
+    //sceneManager->SetRootNode(this);
 }
 
 GameLoop::~GameLoop()
