@@ -36,5 +36,5 @@ void MainMenu::_process(float delta)
 void MainMenu::_on_LoadGame_pressed(Variant)
 {
     SceneManager sceneManager;
-    sceneManager.LoadScene("Example.tscn", this);
+    sceneManager.LoadScene("Game.tscn", this);
 }
