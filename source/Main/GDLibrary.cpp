@@ -1,6 +1,7 @@
 #include "GameLoop.h"
 #include "MainMenu.h"
 #include "SceneManager.h"
+#include "Player.h"
 
 extern "C" void GDN_EXPORT godot_gdnative_init(godot_gdnative_init_options * o) {
     godot::Godot::gdnative_init(o);
@@ -15,4 +16,6 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 
     godot::register_class<godot::GameLoop>();
     godot::register_class<godot::MainMenu>();
+    godot::register_class<godot::SceneManager>();
+    godot::register_class<godot::Player>();
 }
