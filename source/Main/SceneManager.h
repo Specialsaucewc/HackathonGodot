@@ -3,6 +3,8 @@
 #include <SceneTree.hpp>
 #include <PackedScene.hpp>
 #include <Node.hpp>
+#include <map>
+#include <ResourceLoader.hpp>
 
 namespace godot {
 
@@ -11,12 +13,16 @@ namespace godot {
 
     private:
         static SceneManager* instance;
-        SceneManager() {};
+        SceneManager() {
+            loader = ResourceLoader::get_singleton();
+        };
         ~SceneManager() {};
 
+        ResourceLoader* loader = nullptr;
         Node* rootSceneNode = nullptr;
-        Ref<PackedScene> _currentScene;
         Node* _currentSceneNode;
+
+        std::map<godot::String, Node*> activeScenes;
 
         Node* GetRootSceneNode(Node* callingNode);
 

@@ -1,4 +1,3 @@
-#include <ResourceLoader.hpp>
 #include "SceneManager.h"
 #include <iostream>
 #include <fstream>
@@ -17,10 +16,11 @@ void SceneManager::_process()
 
 void SceneManager::LoadScene(const godot::String sceneToLoad, Node* callingNode)
 {
-    ResourceLoader* loader = ResourceLoader::get_singleton();
-    _currentScene = loader->load("res://scenes/" + sceneToLoad);
+    Ref<PackedScene> _currentScene = loader->load("res://scenes/" + sceneToLoad);
 
     Node* scene = _currentScene->instance();
+    activeScenes.insert(std::make_pair(sceneToLoad, scene));
+
     Node* sceneRoot = GetRootSceneNode(callingNode);
 
     sceneRoot->add_child(scene);
