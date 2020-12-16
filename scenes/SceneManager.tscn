@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scenes/SceneManager.gdns" type="Script" id=1]
+[ext_resource path="res://gdns/SceneManager.gdns" type="Script" id=1]
+
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource( 1 )

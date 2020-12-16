@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/MainMenu.gdns" type="Script" id=1]
+[ext_resource path="res://gdns/MainMenu.gdns" type="Script" id=1]
+[ext_resource path="res://shaders/MainMenu.shader" type="Shader" id=2]
+[ext_resource path="res://assets/fuckmylife.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/Animate = true
+shader_param/GridSize = 15.0
+shader_param/FlickerSpeed = 0.5
+shader_param/ColorSpeed = 1.5
+shader_param/PI = 3.14159
 
 [node name="MainMenu" type="Control"]
 margin_right = 40.0
@@ -11,18 +24,34 @@ __meta__ = {
 }
 
 [node name="LoadGame" type="Button" parent="."]
-margin_left = 385.303
-margin_top = 168.867
-margin_right = 597.303
-margin_bottom = 224.867
+anchor_left = 0.0210236
+anchor_top = -0.021022
+anchor_right = 0.0210236
+anchor_bottom = -0.021022
+margin_left = 405.485
+margin_top = 461.499
+margin_right = 617.484
+margin_bottom = 517.499
+custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="LoadGame"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 212.0
+margin_bottom = 55.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Start Game"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 512, 137.859 )
+scale = Vector2( 2, 2 )
+z_index = -1
+texture = ExtResource( 3 )
 [connection signal="pressed" from="LoadGame" to="." method="_on_LoadGame_pressed"]
