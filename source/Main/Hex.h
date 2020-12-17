@@ -1,6 +1,8 @@
 #pragma once
 #include <Godot.hpp>
 #include <KinematicBody2D.hpp>
+#include "SceneManager.h"
+#include "GameLoop.h"
 
 namespace godot {
 
@@ -12,6 +14,7 @@ namespace godot {
         float moveSpeed = 4.;
         Vector2 scale = Vector2(6.,6.);
         void apply_scale(float scaleChange);
+        SceneManager* sceneManager;
 
     public:
         static void _register_methods();

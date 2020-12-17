@@ -22,6 +22,7 @@ void Hex::_init() {
     // initialize any variables here
     rotation = get_rotation();
     scale = get_scale();
+    sceneManager = sceneManager->GetInstance();
 }
 
 void Hex::_physics_process(float delta) {
@@ -39,6 +40,8 @@ void Hex::apply_scale(float scaleChange) {
     }
 }
 
-void _on_Area2D_body_entered(Variant) {
-    Godot::print("Hello?");
+void Hex::_on_Area2D_body_entered(Variant) {
+    sceneManager->SwapScene("Game.tscn", "Lose.tscn", this);
+    GameLoop::SetMetaState(MetaState::GameLost);
+    queue_free();
 }
