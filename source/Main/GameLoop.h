@@ -24,6 +24,7 @@ namespace godot {
 		GODOT_CLASS(GameLoop, Node)
             
 		private:
+			static float* gameTime;
 			static MetaState* metaState;
 			Node* mainGameNode = nullptr;
 			SceneManager* sceneManager;
@@ -39,6 +40,17 @@ namespace godot {
 
         public:
 		static void _register_methods();
+
+		static float* GetGameTime()
+		{
+			if (!gameTime)
+			{
+				gameTime = new float;
+				*gameTime = 0.0f;
+			}
+
+			return gameTime;
+		}
 
 		static MetaState* GetMetaState() {
 			if (!metaState)
@@ -57,6 +69,10 @@ namespace godot {
 			}
 			*metaState = newState;
 			stateChanged = true;
+			if (newState == MetaState::Gameplay)
+			{
+				*gameTime = 0.0f;
+			}
 		};
         
 		GameLoop();

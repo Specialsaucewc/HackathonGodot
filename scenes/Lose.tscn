@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://gdns/LoseScreen.gdns" type="Script" id=1]
 [ext_resource path="res://assets/fuckmylife.png" type="Texture" id=2]
 [ext_resource path="res://shaders/MainMenu.shader" type="Shader" id=3]
 [ext_resource path="res://assets/fonts/defaultFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://gdns/GameTimer.gdns" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -84,16 +85,46 @@ z_index = -1
 texture = ExtResource( 2 )
 
 [node name="Title" type="Label" parent="."]
-margin_left = 273.612
-margin_top = 195.587
-margin_right = 429.612
-margin_bottom = 244.587
+margin_left = 275.5
+margin_top = 113.469
+margin_right = 431.5
+margin_bottom = 162.469
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "GAME OVER"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameTimeLabel" type="Label" parent="."]
+margin_left = 341.571
+margin_top = 270.153
+margin_right = 497.571
+margin_bottom = 319.153
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "YOUR TIME: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameTime" type="Label" parent="."]
+margin_left = 573.765
+margin_top = 271.097
+margin_right = 729.765
+margin_bottom = 320.097
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0.00"
+valign = 1
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

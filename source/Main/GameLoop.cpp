@@ -2,6 +2,7 @@
 
 using namespace godot;
 MetaState* GameLoop::metaState = NULL;
+float* GameLoop::gameTime = NULL;
 bool GameLoop::stateChanged = false;
 
 void GameLoop::_register_methods() {
@@ -27,6 +28,7 @@ void GameLoop::_ready()
 {
     sceneManager->LoadScene("MainMenu.tscn", this);
     SetMetaState(MetaState::MainMenu);
+    GetGameTime();
 }
 
 void GameLoop::_init()
@@ -69,6 +71,7 @@ void GameLoop::_process(float delta)
     case MetaState::Gameplay:
         // Gameplay stuff here
         secondsSinceLastSpawn += delta;
+        *gameTime += delta;
         if (secondsSinceLastSpawn > hexSpawnTime)
         {
             secondsSinceLastSpawn = fmod(secondsSinceLastSpawn, hexSpawnTime);
