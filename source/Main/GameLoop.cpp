@@ -14,6 +14,7 @@ void GameLoop::_register_methods() {
 
 GameLoop::GameLoop()
 {
+    srand((unsigned int)time(NULL));
     sceneManager = sceneManager->GetInstance();
     //sceneManager->SetRootNode(this);
 }
