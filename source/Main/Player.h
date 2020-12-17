@@ -13,6 +13,7 @@ namespace godot {
         float moveSpeed;
         Input* input;
         void apply_rotation(float rot);
+        Vector2 get_facing_vector();
         float get_input();
 
     public:

@@ -26,6 +26,14 @@ void Player::_physics_process(float delta) {
 
     float new_rotation = (axis*delta*moveSpeed);
     apply_rotation(new_rotation);
+
+    //Godot::print(this->get_transform());
+    /*if (test_move(this->get_transform(), get_facing_vector(), false)) {
+        Godot::print("Game Over");
+    }*/
+    //Ref<KinematicCollision2D> collision = move_and_collide(this->get_facing_vector(), true, true, true);
+    
+    
 }
 
 float Player::get_input() {
@@ -39,6 +47,10 @@ float Player::get_input() {
     return axis;
 }
 
+
+Vector2 Player::get_facing_vector() {
+    return Vector2(-sinf(rotation), cos(rotation));
+}
 
 void Player::apply_rotation(float rot) {
     rotation = fmod(rotation + rot, 360);
