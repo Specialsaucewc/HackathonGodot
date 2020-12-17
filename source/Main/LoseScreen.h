@@ -10,21 +10,20 @@
 #include "GameLoop.h"
 
 namespace godot {
-    
-	class MainMenu : public Control {
-		GODOT_CLASS(MainMenu, Control)
-            
-        private:
-        
-        public:
+
+	class LoseScreen : public Control {
+		GODOT_CLASS(LoseScreen, Control)
+
+	private:
+
+	public:
 		static void _register_methods();
-        
-		MainMenu();
-		~MainMenu();
-        
-		void _ready();
+
+		LoseScreen();
+		~LoseScreen();
+
 		void _init();
-		void _process(float delta);
-		void _on_LoadGame_pressed(Variant body);
+		void _on_RestartGame_pressed(Variant body);
+		void _on_ExitGame_pressed(Variant body);
 	};
 }
