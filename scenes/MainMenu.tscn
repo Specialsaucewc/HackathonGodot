@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gdns/MainMenu.gdns" type="Script" id=1]
 [ext_resource path="res://shaders/MainMenu.shader" type="Shader" id=2]
 [ext_resource path="res://assets/fuckmylife.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/defaultFont.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -31,7 +32,7 @@ anchor_bottom = -0.021022
 margin_left = 405.159
 margin_top = 460.841
 margin_right = 617.159
-margin_bottom = 510.841
+margin_bottom = 516.841
 custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,7 +40,8 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="LoadGame"]
 margin_right = 212.0
-margin_bottom = 55.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Start Game"
 align = 1
@@ -54,4 +56,19 @@ position = Vector2( 512, 137.859 )
 scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 280.189
+margin_top = 154.0
+margin_right = 430.189
+margin_bottom = 214.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Calvin Klein"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="LoadGame" to="." method="_on_LoadGame_pressed"]

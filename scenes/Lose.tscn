@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gdns/LoseScreen.gdns" type="Script" id=1]
 [ext_resource path="res://assets/fuckmylife.png" type="Texture" id=2]
 [ext_resource path="res://shaders/MainMenu.shader" type="Shader" id=3]
+[ext_resource path="res://assets/fonts/defaultFont.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -40,6 +41,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="RestartGame"]
 margin_right = 212.0
 margin_bottom = 55.0
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Restart Game"
 align = 1
@@ -65,6 +67,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="ExitGame"]
 margin_right = 212.0
 margin_bottom = 55.0
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Exit Game"
 align = 1
@@ -79,5 +82,20 @@ position = Vector2( 512, 137.859 )
 scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 273.612
+margin_top = 195.587
+margin_right = 429.612
+margin_bottom = 244.587
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="RestartGame" to="." method="_on_RestartGame_pressed"]
 [connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
