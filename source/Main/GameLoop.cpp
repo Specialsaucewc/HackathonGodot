@@ -30,10 +30,12 @@ void GameLoop::_ready()
 
 void GameLoop::_init()
 {   
+    input = Input::get_singleton();
 }
 
 void GameLoop::_process(float delta)
 {
+
     // Main game loop here
     if (debugMode)
     {
@@ -47,6 +49,9 @@ void GameLoop::_process(float delta)
                 break;
             case MetaState::Gameplay:
                 currentMetaState = "Gameplay";
+                break;
+            case MetaState::GameLost:
+                currentMetaState = "GameLost";
                 break;
             default:
                 currentMetaState = "N/A";
@@ -72,6 +77,11 @@ void GameLoop::_process(float delta)
             {
                 Godot::print("Hex Added");
             }
+        }
+
+        if (input->is_action_pressed("ui_end")) {
+            sceneManager->SwapScene("Game.tscn", "Lose.tscn", this);
+            SetMetaState(MetaState::GameLost);
         }
         break;
     }

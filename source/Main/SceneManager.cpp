@@ -21,7 +21,10 @@ void SceneManager::LoadScene(const godot::String sceneToLoad, Node* callingNode)
     Ref<PackedScene> _currentScene = loader->load("res://scenes/" + sceneToLoad);
 
     Node* scene = _currentScene->instance();
-    activeScenes.insert(std::make_pair(sceneToLoad, scene));
+    if (sceneToLoad != "Hex.tscn")
+    {
+        activeScenes.insert(std::make_pair(sceneToLoad, scene));
+    }
     Node* sceneRoot = GetRootSceneNode(callingNode);
 
     sceneRoot->add_child(scene);
@@ -32,12 +35,14 @@ void SceneManager::UnloadScene(const godot::String sceneToUnload, Node* callingN
     Node* sceneRoot = GetRootSceneNode(callingNode);
 
     std::map<godot::String, Node*>::iterator sceneMap = activeScenes.find(sceneToUnload);
+
     if (sceneMap != activeScenes.end())
     {
         Node* unloadingScene = sceneMap->second;
         unloadingScene->queue_free();
         activeScenes.erase(sceneMap);
     }
+    
 }
 
 void SceneManager::SwapScene(const godot::String sceneToUnload, const godot::String sceneToLoad, Node* callingNode)

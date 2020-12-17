@@ -4,6 +4,7 @@
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
 #include <ResourceLoader.hpp>
+#include <Input.hpp>
 
 #include "SceneManager.h"
 
@@ -24,8 +25,6 @@ namespace godot {
             
 		private:
 			static MetaState* metaState;
-
-			Ref<PackedScene> mainGame;
 			Node* mainGameNode = nullptr;
 			SceneManager* sceneManager;
 
@@ -36,6 +35,7 @@ namespace godot {
 			// Debug
 			bool debugMode = true;
 			static bool stateChanged;
+			Input* input;
 
         public:
 		static void _register_methods();

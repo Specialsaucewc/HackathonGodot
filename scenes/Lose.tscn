@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://gdns/LoseScreen.gdns" type="Script" id=1]
+[ext_resource path="res://assets/fuckmylife.png" type="Texture" id=2]
+[ext_resource path="res://shaders/MainMenu.shader" type="Shader" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/Animate = true
+shader_param/GridSize = 15.0
+shader_param/FlickerSpeed = 0.5
+shader_param/ColorSpeed = 1.5
+shader_param/PI = 3.14159
+
+[node name="LoseScreen" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartGame" type="Button" parent="."]
+anchor_left = 0.0210236
+anchor_top = -0.021022
+anchor_right = 0.0210236
+anchor_bottom = -0.021022
+margin_left = 172.966
+margin_top = 460.841
+margin_right = 384.966
+margin_bottom = 510.841
+custom_styles/normal = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="RestartGame"]
+margin_right = 212.0
+margin_bottom = 55.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Restart Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitGame" type="Button" parent="."]
+anchor_left = 0.0210236
+anchor_top = -0.021022
+anchor_right = 0.0210236
+anchor_bottom = -0.021022
+margin_left = 653.398
+margin_top = 460.841
+margin_right = 865.398
+margin_bottom = 510.841
+custom_styles/normal = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ExitGame"]
+margin_right = 212.0
+margin_bottom = 55.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Exit Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 512, 137.859 )
+scale = Vector2( 2, 2 )
+z_index = -1
+texture = ExtResource( 2 )
+[connection signal="pressed" from="RestartGame" to="." method="_on_RestartGame_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]

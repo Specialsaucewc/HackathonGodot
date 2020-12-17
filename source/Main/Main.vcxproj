@@ -146,6 +146,7 @@
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GDLibrary.cpp" />
     <ClCompile Include="Hex.cpp" />
+    <ClCompile Include="LoseScreen.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneManager.cpp" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Hex.h" />
+    <ClInclude Include="LoseScreen.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneManager.h" />
