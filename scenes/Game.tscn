@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Hex.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/defaultFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://gdns/GameTimer.gdns" type="Script" id=4]
 
@@ -13,9 +12,6 @@ move_speed = 7.0
 
 [node name="Center" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( -25, -43.3, 25, -43.3, 50, 0, 25, 43.3, -25, 43.3, -50, 0, -40, 0, -20, 34.64, 20, 34.64, 40, 0, 20, -34.64, -20, -34.64, -40, 0, -50, 0 )
-
-[node name="Hex" parent="." instance=ExtResource( 2 )]
-position = Vector2( -0.010437, 0.0597839 )
 
 [node name="Timer" type="Label" parent="."]
 margin_left = -116.731
