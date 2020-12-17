@@ -15,6 +15,7 @@ namespace godot {
 		GODOT_CLASS(LoseScreen, Control)
 
 	private:
+		Input* input;
 
 	public:
 		static void _register_methods();
@@ -25,5 +26,6 @@ namespace godot {
 		void _init();
 		void _on_RestartGame_pressed(Variant body);
 		void _on_ExitGame_pressed(Variant body);
+		void _process();
 	};
 }

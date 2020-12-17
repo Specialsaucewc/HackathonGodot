@@ -24,10 +24,14 @@ void MainMenu::_ready()
 
 void MainMenu::_init()
 {
+    input = Input::get_singleton();
 }
 
 void MainMenu::_process(float delta)
 {
+    if (input->is_action_pressed("ui_accept")) {
+        _on_LoadGame_pressed(0);
+    }
 }
 
 void MainMenu::_on_LoadGame_pressed(Variant)

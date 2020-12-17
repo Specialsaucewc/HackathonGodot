@@ -65,7 +65,8 @@ margin_bottom = 214.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Calvin Klein"
+text = "Not Super
+Hexagon"
 align = 1
 valign = 1
 __meta__ = {

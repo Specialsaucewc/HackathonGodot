@@ -27,6 +27,8 @@ void Hex::_init() {
     sceneManager = sceneManager->GetInstance();
     float a = 5;
     rotationSpeed = float(rand()) / float((RAND_MAX)) * maxRotationSpeed;
+    float rotationDir = rand() - (RAND_MAX / 2);
+    rotationSpeed *= (rotationDir > 0) - (rotationDir < 0);
 }
 
 void Hex::_process()
@@ -49,7 +51,7 @@ void Hex::apply_scale(float scaleChange) {
     scale = Vector2(scale.x - scaleChange, scale.y - scaleChange);
     set_scale(scale);
 
-    if (scale.x < .3) {
+    if (scale.x < .35) {
         queue_free();
     }
 }

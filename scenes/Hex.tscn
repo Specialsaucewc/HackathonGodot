@@ -11,7 +11,7 @@ script = ExtResource( 1 )
 rotation = 0.523599
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( -129.9, -75, -86.6, -50, -86.6, 50, 0, 100, 86.6, 50, 86.6, -50, 0, -100, 0, -150, 129.9, -75, 129.9, 75, 0, 150, -129.9, 75 )
+polygon = PoolVector2Array( -129.35, -68.7911, -88.9741, -47.3577, -86.6, 50, 0, 100, 86.6, 50, 86.6, -50, 3.46959, -101.74, 3.64265, -146.441, 129.9, -75, 129.9, 75, 0, 150, -129.9, 75 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Area2D"]
 polygon = PoolVector2Array( 0, -150, 129.9, -75, 129.9, 75, 0, 150, -129.9, 75, -129.9, -75, -86.6, -50, -86.6, 50, 0, 100, 86.6, 50, 86.6, -50, 0, -100 )

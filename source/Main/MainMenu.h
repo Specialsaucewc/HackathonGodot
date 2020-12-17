@@ -15,6 +15,7 @@ namespace godot {
 		GODOT_CLASS(MainMenu, Control)
             
         private:
+			Input* input;
         
         public:
 		static void _register_methods();
