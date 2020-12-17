@@ -5,9 +5,10 @@
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 1 )
+move_speed = null
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 0, -60 )
+position = Vector2( 0, -70 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
 polygon = PoolVector2Array( -0.0754013, -13.2847, -14.3415, 11.827, 14.3576, 11.9104 )

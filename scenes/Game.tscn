@@ -1,13 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Hex.tscn" type="PackedScene" id=2]
 
 [node name="GameBoard" type="Node2D"]
 position = Vector2( 512, 300 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-move_speed = 20.0
+move_speed = 7.0
 
 [node name="Center" type="Polygon2D" parent="."]
-scale = Vector2( 0.8, 0.8 )
 polygon = PoolVector2Array( -25, -43.3, 25, -43.3, 50, 0, 25, 43.3, -25, 43.3, -50, 0, -40, 0, -20, 34.64, 20, 34.64, 40, 0, 20, -34.64, -20, -34.64, -40, 0, -50, 0 )
+
+[node name="Hex" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.010437, 0.0597839 )
